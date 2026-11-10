@@ -116,5 +116,82 @@
     "source": "white_eyes_bg/Images/whitescl_00150.png",
     "license": "CC-BY-NC-4.0",
     "eye_crop": true
+  },
+  {
+    "id": "fig11-mobius",
+    "label": "MOBIUS",
+    "description": "MOBIUS: celular, mirada lateral. Ojo de la figura 1.1 de la tesis, mostrado solo como ilustración con crédito a la base; no se distribuye con el dataset.",
+    "src": "/examples/fig11-mobius.webp",
+    "thumbnail": "/examples/fig11-mobius-thumb.webp",
+    "source": "tesis figura 1.1",
+    "license": "terceros; ilustración",
+    "third_party": true,
+    "eye_crop": true
+  },
+  {
+    "id": "fig11-polyu",
+    "label": "PolyU",
+    "description": "PolyU: primer plano con reflejo especular. Ojo de la figura 1.1 de la tesis, mostrado solo como ilustración con crédito a la base; no se distribuye con el dataset.",
+    "src": "/examples/fig11-polyu.webp",
+    "thumbnail": "/examples/fig11-polyu-thumb.webp",
+    "source": "tesis figura 1.1",
+    "license": "terceros; ilustración",
+    "third_party": true,
+    "eye_crop": true
+  },
+  {
+    "id": "fig11-ubiris",
+    "label": "UBIRIS.v2",
+    "description": "UBIRIS.v2: periocular a distancia. Ojo de la figura 1.1 de la tesis, mostrado solo como ilustración con crédito a la base; no se distribuye con el dataset.",
+    "src": "/examples/fig11-ubiris.webp",
+    "thumbnail": "/examples/fig11-ubiris-thumb.webp",
+    "source": "tesis figura 1.1",
+    "license": "terceros; ilustración",
+    "third_party": true,
+    "eye_crop": true
+  },
+  {
+    "id": "fig11-miche",
+    "label": "MICHE-I",
+    "description": "MICHE-I: selfie con anteojos. Ojo de la figura 1.1 de la tesis, mostrado solo como ilustración con crédito a la base; no se distribuye con el dataset.",
+    "src": "/examples/fig11-miche.webp",
+    "thumbnail": "/examples/fig11-miche-thumb.webp",
+    "source": "tesis figura 1.1",
+    "license": "terceros; ilustración",
+    "third_party": true,
+    "eye_crop": true
+  },
+  {
+    "id": "fig11-fei",
+    "label": "FEI",
+    "description": "FEI: recorte de rostro completo, ojo chico. Ojo de la figura 1.1 de la tesis, mostrado solo como ilustración con crédito a la base; no se distribuye con el dataset.",
+    "src": "/examples/fig11-fei.webp",
+    "thumbnail": "/examples/fig11-fei-thumb.webp",
+    "source": "tesis figura 1.1",
+    "license": "terceros; ilustración",
+    "third_party": true,
+    "eye_crop": true
+  },
+  {
+    "id": "fig11-casia",
+    "label": "CASIA",
+    "description": "CASIA Iris Distance: NIR pasado a visible con pix2pix. Ojo de la figura 1.1 de la tesis, mostrado solo como ilustración con crédito a la base; no se distribuye con el dataset.",
+    "src": "/examples/fig11-casia.webp",
+    "thumbnail": "/examples/fig11-casia-thumb.webp",
+    "source": "tesis figura 1.1",
+    "license": "terceros; ilustración",
+    "third_party": true,
+    "eye_crop": true
+  },
+  {
+    "id": "fig11-teyed",
+    "label": "TEyeD",
+    "description": "TEyeD: NIR pasado a visible con pix2pix. Ojo de la figura 1.1 de la tesis, mostrado solo como ilustración con crédito a la base; no se distribuye con el dataset.",
+    "src": "/examples/fig11-teyed.webp",
+    "thumbnail": "/examples/fig11-teyed-thumb.webp",
+    "source": "tesis figura 1.1",
+    "license": "terceros; ilustración",
+    "third_party": true,
+    "eye_crop": true
   }
 ]

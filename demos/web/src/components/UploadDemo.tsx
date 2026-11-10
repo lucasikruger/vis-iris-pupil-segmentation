@@ -88,13 +88,14 @@ export default function UploadDemo({ active = true, autoSelect = false, onCamera
     if (example) { setEyeCrop(example.eye_crop === true); choose(example.src!); }
   }, [ready]);
   return <>
+    <div className="demo-grid"><div style={{ display: 'grid', gap: 18, minWidth: 0 }}>
     <ExampleGallery id="ejemplos" entries={examples} ready={ready} onChoose={selectExample} />
-    <div id="resultados" className="demo-grid"><div className="panel">
+    <div id="resultados" className="panel">
       {examples.find(e => e.src === url)?.description && <p data-testid="example-description">{examples.find(e => e.src === url)!.description}</p>}
       {url ? <div style={{ position: 'relative', display: eyeCrop ? 'none' : undefined }}><img ref={img} src={url} alt="Imagen seleccionada" onLoad={() => { setBoxFrame(previous => ({ ...previous, boxes: [] })); setLoaded(n => n + 1); }} onError={() => setStatus('Error al cargar la imagen')} style={{ display: 'block', width: '100%' }} /><CropBoxes {...boxFrame} visible={showBoxes} testId="gallery-crop-boxes" /></div> : <p>Elegí un ejemplo o una foto.</p>}
       <EyeComparison clean={[cleanLeft, cleanRight]} segmented={[left, right]} prefix="gallery" single={eyeCrop} />
       <button disabled={!boxFrame.boxes.length} onClick={() => downloadComparison((eyeCrop ? [cleanLeft] : [cleanLeft, cleanRight]).map(r => r.current!), (eyeCrop ? [left] : [left, right]).map(r => r.current!))}>Descargar grilla PNG</button>
-    </div><aside className="panel" style={{ display: 'grid', gap: 12 }}>
+    </div></div><aside className="panel" style={{ display: 'grid', gap: 12 }}>
       {onCamera && <button onClick={onCamera}>Probar con la cámara</button>}
       <div role="status">{status}</div>
       <ControlsPanel>
