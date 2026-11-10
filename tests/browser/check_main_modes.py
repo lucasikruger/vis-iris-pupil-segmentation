@@ -20,7 +20,7 @@ with sync_playwright() as pw:
    Image.open(io.BytesIO(page.screenshot(scale='css'))).convert('RGB').save(out/f'main-modes-{name}-{suffix}.webp',quality=90)
   def processed():examples.get_by_role('status').filter(has_text='1 ojo(s) procesado(s)').wait_for(timeout=120000)
   def start():
-   page.get_by_role('button',name='Prender cámara',exact=True).click()
+   page.get_by_role('button',name='Probar con la cámara',exact=True).click()
    assert webcam.is_visible() and not examples.is_visible()
   def ready():page.wait_for_function("parseFloat(document.querySelector('[data-testid=fps]').textContent)>0",timeout=120000)
   def returned():

@@ -9,13 +9,12 @@ export default function MainDemo() {
     window.scrollTo({ top: 0, behavior: 'instant' });
   }
   return <>
-    <div className="mode-header">
-      <h1>{mode === 'examples' ? 'Probar con ejemplos' : 'Modo webcam'}</h1>
-      <p className="muted">{mode === 'examples' ? 'Elegí un ejemplo para ver su segmentación. La cámara está apagada.' : 'La cámara y las fotos se procesan en este navegador.'}</p>
-      {mode === 'examples' && <button onClick={() => switchMode('webcam')}>Prender cámara</button>}
-    </div>
+    {mode === 'webcam' && <div className="mode-header">
+      <h1>Modo webcam</h1>
+      <p className="muted">La cámara y las fotos se procesan en este navegador.</p>
+    </div>}
     <div hidden={mode !== 'examples'} data-testid="examples-mode">
-      <UploadDemo active={mode === 'examples'} autoSelect />
+      <UploadDemo active={mode === 'examples'} autoSelect onCamera={() => switchMode('webcam')} />
     </div>
     <div hidden={mode !== 'webcam'} data-testid="webcam-mode">
       <WebcamDemo active={mode === 'webcam'} onExit={() => switchMode('examples')} />

@@ -12,7 +12,7 @@ import { renderCropWithMask, type CropOutline } from '@lib/render';
 import { postprocess, pupilCenter } from '@lib/postprocess';
 import CropBoxes from './CropBoxes';
 import ExampleGallery, { type Example } from './ExampleGallery';
-export default function UploadDemo({ active = true, autoSelect = false }: { active?: boolean; autoSelect?: boolean }) {
+export default function UploadDemo({ active = true, autoSelect = false, onCamera }: { active?: boolean; autoSelect?: boolean; onCamera?: () => void }) {
   const img = useRef<HTMLImageElement>(null), left = useRef<HTMLCanvasElement>(null), right = useRef<HTMLCanvasElement>(null);
   const cleanLeft = useRef<HTMLCanvasElement>(null), cleanRight = useRef<HTMLCanvasElement>(null);
   const segmenter = useRef<OnnxSegmenter | null>(null), generation = useRef(0);
@@ -95,6 +95,7 @@ export default function UploadDemo({ active = true, autoSelect = false }: { acti
       <EyeComparison clean={[cleanLeft, cleanRight]} segmented={[left, right]} prefix="gallery" single={eyeCrop} />
       <button disabled={!boxFrame.boxes.length} onClick={() => downloadComparison((eyeCrop ? [cleanLeft] : [cleanLeft, cleanRight]).map(r => r.current!), (eyeCrop ? [left] : [left, right]).map(r => r.current!))}>Descargar grilla PNG</button>
     </div><aside className="panel" style={{ display: 'grid', gap: 12 }}>
+      {onCamera && <button onClick={onCamera}>Probar con la cámara</button>}
       <div role="status">{status}</div>
       <ControlsPanel>
       <label>Foto <input type="file" accept="image/*" onChange={e => { const f = e.target.files?.[0]; if (f) choose(URL.createObjectURL(f)); }} /></label>
@@ -110,6 +111,5 @@ export default function UploadDemo({ active = true, autoSelect = false }: { acti
       </details>
       </ControlsPanel>
     </aside></div>
-    <ExampleGallery entries={examples} ready={ready} onChoose={selectExample} />
   </>;
 }

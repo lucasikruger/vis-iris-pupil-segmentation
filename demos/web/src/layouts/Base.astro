@@ -113,6 +113,8 @@ const { title = "Iris Segmentation Demo" } = Astro.props;
     .example-grid > .button-link { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 12px; overflow-wrap: anywhere; }
 .eye-comparison canvas { width: 100%; max-width: 260px; aspect-ratio: 1; }
       .eye-comparison > p { margin: 8px 0; font-size: 13px; }
+      .eye-comparison.side { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+      .eye-comparison.side .eyes-grid { grid-template-columns: minmax(0, 1fr); }
       .eye-comparison span { font-size: 12px; }
       .eye-comparison { margin-bottom: 12px; }
 .desktop-actions { display: flex; margin-top: 0; }
