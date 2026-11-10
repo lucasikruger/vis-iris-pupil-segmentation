@@ -1,0 +1,186 @@
+{
+  "opacity": 0.7,
+  "blend": "auto",
+  "assets": {
+    "lashes.png": {
+      "cat": "pesta\u00f1as",
+      "enabled": true,
+      "base": {
+        "x": 0.5,
+        "y": 0.34
+      },
+      "scale": 1.6424369669961743,
+      "rot": 0.37477696035057306,
+      "mirror": true,
+      "rules": {
+        "scMin": 1.34,
+        "scMax": 2.23,
+        "rotMax": 14,
+        "dx": 0.08,
+        "dy": 0.05,
+        "mirror": true,
+        "cover": false
+      }
+    },
+    "eyebrows.png": {
+      "cat": "cejas",
+      "enabled": true,
+      "base": {
+        "x": 0.5,
+        "y": 0.26
+      },
+      "scale": 1.37,
+      "rot": -1,
+      "mirror": true,
+      "rules": {
+        "scMin": 1.27,
+        "scMax": 1.9,
+        "rotMax": 12,
+        "dx": 0.12,
+        "dy": 0.06,
+        "mirror": true,
+        "cover": false
+      }
+    },
+    "glasses.webp": {
+      "cat": "anteojos",
+      "enabled": true,
+      "base": {
+        "x": 0.6,
+        "y": 0.5
+      },
+      "scale": 2.5,
+      "rot": -2.1500461250543594,
+      "mirror": false,
+      "rules": {
+        "scMin": 2.5,
+        "scMax": 2.5,
+        "rotMax": 8,
+        "dx": 0.46,
+        "dy": 0.1,
+        "mirror": true,
+        "cover": false
+      }
+    },
+    "glass_texture.png": {
+      "cat": "vidrio",
+      "enabled": false,
+      "base": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "scale": 1,
+      "rot": 0,
+      "mirror": false,
+      "rules": {
+        "scMin": 1,
+        "scMax": 1.8,
+        "rotMax": 18,
+        "dx": 0.14,
+        "dy": 0.14,
+        "mirror": true,
+        "cover": true
+      }
+    },
+    "glass_broken.webp": {
+      "cat": "vidrio roto",
+      "enabled": false,
+      "base": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "scale": 1,
+      "rot": 0,
+      "mirror": false,
+      "rules": {
+        "scMin": 1,
+        "scMax": 1.8,
+        "rotMax": 18,
+        "dx": 0.14,
+        "dy": 0.14,
+        "mirror": true,
+        "cover": true
+      }
+    },
+    "glass_scratches.png": {
+      "cat": "rayones",
+      "enabled": false,
+      "base": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "scale": 1,
+      "rot": 0,
+      "mirror": false,
+      "rules": {
+        "scMin": 1,
+        "scMax": 1.8,
+        "rotMax": 18,
+        "dx": 0.14,
+        "dy": 0.14,
+        "mirror": true,
+        "cover": true
+      }
+    },
+    "water_drops.png": {
+      "cat": "gotas",
+      "enabled": false,
+      "base": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "scale": 1,
+      "rot": 0,
+      "mirror": false,
+      "rules": {
+        "scMin": 1,
+        "scMax": 1.8,
+        "rotMax": 18,
+        "dx": 0.14,
+        "dy": 0.14,
+        "mirror": true,
+        "cover": true
+      }
+    },
+    "glint.png": {
+      "cat": "destello / brillo",
+      "enabled": false,
+      "base": {
+        "x": 0.5,
+        "y": 0.4
+      },
+      "scale": 0.5,
+      "rot": 0,
+      "mirror": false,
+      "rules": {
+        "scMin": 0.2,
+        "scMax": 0.95,
+        "rotMax": 180,
+        "dx": 0.42,
+        "dy": 0.42,
+        "mirror": true,
+        "cover": false
+      }
+    },
+    "glint_yellow.webp": {
+      "cat": "destello / brillo",
+      "enabled": false,
+      "base": {
+        "x": 0.5,
+        "y": 0.4
+      },
+      "scale": 0.5,
+      "rot": 0,
+      "mirror": false,
+      "rules": {
+        "scMin": 0.2,
+        "scMax": 0.95,
+        "rotMax": 180,
+        "dx": 0.42,
+        "dy": 0.42,
+        "mirror": true,
+        "cover": false
+      }
+    }
+  }
+}

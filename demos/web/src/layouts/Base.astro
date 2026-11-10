@@ -1,0 +1,139 @@
+---
+interface Props {
+  title?: string;
+}
+const { title = "Iris Segmentation Demo" } = Astro.props;
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <style is:global>
+      :root {
+        --bg: #0d0f12;
+        --fg: #e8eaed;
+        --muted: #8b9097;
+        --accent: #7aa2f7;
+        --accent-2: #f78b8b;
+        --panel: #161a20;
+        --border: #262b33;
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; height: 100%; }
+      body {
+        background: var(--bg);
+        color: var(--fg);
+        font: 14px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      header {
+        padding: 14px 22px;
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        gap: 22px;
+        align-items: center;
+      }
+      header .title { font-weight: 700; letter-spacing: 0.5px; }
+      header nav { display: flex; gap: 16px; margin-left: auto; }
+      main { padding: 22px; max-width: 1100px; margin: 0 auto; }
+      .demo-grid { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 18px; align-items: start; }
+      @media (max-width: 960px) { .demo-grid { grid-template-columns: minmax(0, 1fr); } }
+      .panel {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 14px;
+      }
+      button {
+        background: var(--accent);
+        color: #0a0c10;
+        border: none;
+        padding: 8px 14px;
+        border-radius: 6px;
+        cursor: pointer;
+        font: inherit;
+        font-weight: 600;
+      }
+      button:hover { filter: brightness(1.1); }
+      button:disabled { opacity: 0.5; cursor: not-allowed; }
+      select, input[type="range"], input[type="file"] {
+        background: var(--panel);
+        color: var(--fg);
+        border: 1px solid var(--border);
+        padding: 6px 10px;
+        border-radius: 6px;
+        font: inherit;
+      }
+      input[type="file"] { width: 100%; min-width: 0; }
+      label:has(input[type="file"]) { display: grid; min-width: 0; }
+      label { display: inline-flex; gap: 8px; align-items: center; }
+      .muted { color: var(--muted); }
+      header { flex-wrap: wrap; gap: 4px 16px; }
+      header nav { flex-wrap: wrap; gap: 4px; }
+      header nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px; }
+      main, .panel, .demo-grid > *, .eyes-grid > * { min-width: 0; }
+      p, label, button, summary, [role="status"] { overflow-wrap: anywhere; }
+      button, select, input[type="file"], input[type="range"], summary { min-height: 44px; max-width: 100%; }
+      select, input[type="range"] { width: 100%; min-width: 0; }
+      label { display: flex; flex-direction: column; align-items: stretch; width: 100%; min-height: 44px; margin-block: 4px; }
+      label:has(input[type="checkbox"]) { flex-direction: row; align-items: center; }
+      input[type="checkbox"] { flex: 0 0 24px; width: 24px; height: 24px; margin: 0 8px 0 0; }
+      label:has(input[type="checkbox"]) { cursor: pointer; padding-block: 8px; }
+      video, img, canvas { max-width: 100%; }
+      video, canvas { height: auto; }
+      .demo-grid { width: 100%; min-width: 0; }
+      .camera-frame { position: relative; width: 100%; max-width: calc(60vh * var(--camera-ratio, 1.777778)); max-width: calc(60svh * var(--camera-ratio, 1.777778)); aspect-ratio: var(--camera-ratio, 1.777778); margin-inline: auto; }
+      .camera-frame video { display: block; width: 100%; height: 100%; object-fit: contain; background: #000; }
+      .eyes-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+      .eyes-grid p { font-size: 12px; }
+      .eyes-grid canvas { display: block; }
+      .example-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; }
+      .example-grid button { width: 100%; padding: 10px; }
+      .example-grid img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
+      .controls-panel summary { cursor: pointer; padding: 12px 0; font-weight: 700; }
+      .controls-body { display: grid; gap: 12px; padding-top: 8px; }
+      .photo-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+      .button-link { display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 14px; background: var(--accent); color: #0a0c10; border-radius: 6px; font-weight: 600; text-align: center; }
+      .photo-actions > .button-link, .photo-actions > button { flex: 1 1 180px; }
+      @media (max-width: 960px) {
+        main { padding: 12px; }
+        header { padding: 8px 12px; }
+        .panel { padding: 12px; }
+        .demo-grid { gap: 12px; }
+        .example-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+        button, select, input { font-size: 16px; }
+      }
+      @media (max-width: 480px) {
+        .example-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        header nav { margin-left: 0; }
+      }
+    .example-grid > .button-link { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 12px; overflow-wrap: anywhere; }
+.eye-comparison canvas { width: 100%; max-width: 260px; aspect-ratio: 1; }
+      .eye-comparison > p { margin: 8px 0; font-size: 13px; }
+      .eye-comparison span { font-size: 12px; }
+      .eye-comparison { margin-bottom: 12px; }
+.desktop-actions { display: flex; margin-top: 0; }
+      .mobile-actions { display: none; }
+      .camera-wait { min-height: 240px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; background: #0d0f12; border-radius: 6px; }
+      @media (max-width: 960px) { .desktop-actions { display: none; } .mobile-actions { display: flex; } }
+.mode-header { margin-bottom: 18px; }
+      .mode-header h1 { font-size: 24px; margin: 0 0 8px; }
+</style>
+  </head>
+  <body>
+    <header>
+      <span class="title">iris-seg / demo</span>
+      <nav>
+        <a href="/">webcam</a>
+        <a href="/upload.html">upload</a>
+        <a href="/about.html">about</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

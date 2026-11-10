@@ -1,0 +1,7 @@
+{
+  "n": 1,
+  "pixel_mae": 0.8666834247410116,
+  "pixel_max_error": 12.0,
+  "byte_identical": false,
+  "note": "CPU vs export original; no se certifica identidad"
+}

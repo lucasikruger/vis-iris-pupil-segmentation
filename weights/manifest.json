@@ -1,0 +1,18 @@
+{
+  "weights/model.pt": {
+    "bytes": 3982654,
+    "sha256": "8a605439acb04b2a191eafee00ebf04e6d9a36ed48c7f95d99de72484676c7aa"
+  },
+  "web/public/models/res_unet_in_b2__96.onnx": {
+    "bytes": 1324624,
+    "sha256": "8bf10b8f6b6a96edd14f34c529cd1ebaf6924f8c2fa30987364620a66d3d1ffa"
+  },
+  "web/public/mediapipe/face_landmarker.task": {
+    "bytes": 3758596,
+    "sha256": "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff"
+  },
+  "auxiliary-package/pix2pix_rgb.pt": {
+    "bytes": 217718989,
+    "sha256": "1349ba90705a29717c4f4b4af97fb8cd8fb71ae76b09f77e7596b763e86a9dfb"
+  }
+}

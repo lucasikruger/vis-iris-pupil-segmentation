@@ -1,0 +1,22 @@
+[
+  {
+    "name": "res_unet_in_b2__96",
+    "url": "/models/res_unet_in_b2__96.onnx",
+    "input": {
+      "channels": 3,
+      "size": 96,
+      "preprocess": "rgb_clahe_norm_01"
+    },
+    "output": {
+      "classes": [
+        "bg",
+        "iris",
+        "pupil"
+      ]
+    },
+    "dataset": "LODO: MOBIUS retenido; resto del pool para entrenamiento/validación",
+    "architecture": "res_unet_in_b2",
+    "params_m": 0.324,
+    "nota": "El modelo de la tesis. Requiere el recorte con margen 0.12 por lado (ver cropper.ts)."
+  }
+]

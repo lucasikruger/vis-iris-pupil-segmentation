@@ -1,0 +1,20 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Sobre la demo">
+  <article class="panel" style="line-height: 1.7">
+    <h2>Segmentación de iris y pupila</h2>
+    <p>Tesis de Lucas Kruger. La imagen y la inferencia permanecen en tu navegador.</p>
+    <p>MediaPipe localiza los ojos. el recorte cuadrado lleva un margen del 12 % por lado.
+      ResU-Net con InstanceNorm segmenta fondo, iris y pupila a partir de RGB de 96×96.</p>
+    <p>El checkpoint es el de mejor validación (época 99, EMA), con MOBIUS retenido.
+      La evaluación de tesis con OpenCV obtuvo mIoU 0,641 sobre 207 ojos de webcam.
+      La web usa LAB y CLAHE de OpenCV en WASM, con paridad de píxeles verificada en esos recortes.
+      Su preprocesado y ONNX ejecutados en Node también obtuvieron mIoU 0,641.</p>
+    <p>La webcam puede suavizar cajas, probabilidades y centros entre cuadros.
+      La pérdida de rostro o pupila reinicia los filtros. El postprocesado morfológico
+      limpia componentes y huecos sin crear una pupila ausente.</p>
+    <p>La galería contiene recortes oculares de webcam y white-eyes.
+      Las carpetas locales se leen solo en el navegador.</p>
+  </article>
+</Base>

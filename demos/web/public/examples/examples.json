@@ -1,0 +1,120 @@
+[
+  {
+    "id": "frontal",
+    "label": "Luz natural",
+    "src": "/examples/eye-frontal.webp",
+    "thumbnail": "/examples/eye-frontal-thumb.webp",
+    "source": "webcam_manual_mobius-format/Images/person01_1__f1_izq.png",
+    "license": "CC-BY-NC-4.0",
+    "eye_crop": true,
+    "padding": 0.12,
+    "crop_xywh": [
+      81,
+      79,
+      352,
+      352
+    ]
+  },
+  {
+    "id": "lateral",
+    "label": "Iluminación lateral",
+    "src": "/examples/eye-lateral.webp",
+    "thumbnail": "/examples/eye-lateral-thumb.webp",
+    "source": "webcam_manual_mobius-format/Images/person10_1__f1_izq.png",
+    "license": "CC-BY-NC-4.0",
+    "eye_crop": true,
+    "padding": 0.12,
+    "crop_xywh": [
+      80,
+      79,
+      352,
+      352
+    ]
+  },
+  {
+    "id": "anteojos",
+    "label": "Anteojos",
+    "src": "/examples/eye-anteojos.webp",
+    "thumbnail": "/examples/eye-anteojos-thumb.webp",
+    "source": "webcam_manual_mobius-format/Images/person21_1__f1_izq.png",
+    "license": "CC-BY-NC-4.0",
+    "eye_crop": true,
+    "padding": 0.12,
+    "crop_xywh": [
+      81,
+      80,
+      354,
+      354
+    ]
+  },
+  {
+    "id": "poca-luz",
+    "label": "Poca luz",
+    "src": "/examples/eye-poca-luz.webp",
+    "thumbnail": "/examples/eye-poca-luz-thumb.webp",
+    "source": "webcam_manual_mobius-format/Images/person27_1__f1_izq.png",
+    "license": "CC-BY-NC-4.0",
+    "eye_crop": true,
+    "padding": 0.12,
+    "crop_xywh": [
+      79,
+      80,
+      352,
+      352
+    ]
+  },
+  {
+    "id": "reflejos",
+    "label": "Falla: reflejo de pantalla en anteojos",
+    "src": "/examples/eye-reflejos.webp",
+    "thumbnail": "/examples/eye-reflejos-thumb.webp",
+    "source": "webcam_manual_mobius-format/Images/person30_3__f1_izq.png",
+    "license": "CC-BY-NC-4.0",
+    "eye_crop": true,
+    "padding": 0.12,
+    "crop_xywh": [
+      80,
+      78,
+      353,
+      353
+    ],
+    "description": "Falla documentada en la tesis: el reflejo de pantalla tapa casi todo el ojo. En este caso la red se abstiene (solo fondo), en vez de inventar iris o pupila.",
+    "known_failure": true
+  },
+  {
+    "id": "reflejo-moderado",
+    "label": "Reflejo moderado: segmentación correcta",
+    "description": "El reflejo en los anteojos deja visibles el iris y la pupila; la red segmenta ambos.",
+    "src": "/examples/eye-reflejo-moderado.webp",
+    "thumbnail": "/examples/eye-reflejo-moderado-thumb.webp",
+    "source": "webcam_manual_mobius-format/Images/person30_1__f1_der.png",
+    "license": "CC-BY-NC-4.0",
+    "eye_crop": true,
+    "padding": 0.12,
+    "crop_xywh": [
+      79,
+      82,
+      351,
+      351
+    ],
+    "image_max_size": 512
+  },
+  {
+    "id": "white-eyes",
+    "label": "White-eyes sin iris",
+    "src": "/examples/eye-white-eyes.webp",
+    "thumbnail": "/examples/eye-white-eyes-thumb.webp",
+    "source": "white_eyes_bg/Images/whitescl_00000.png",
+    "license": "CC-BY-NC-4.0",
+    "eye_crop": true
+  },
+  {
+    "id": "white-eyes-2",
+    "label": "White-eyes sin anteojos",
+    "src": "/examples/eye-white-eyes-2.webp",
+    "thumbnail": "/examples/eye-white-eyes-2-thumb.webp",
+    "source": "white_eyes_bg/Images/whitescl_00150.png",
+    "license": "CC-BY-NC-4.0",
+    "eye_crop": true
+  }
+]

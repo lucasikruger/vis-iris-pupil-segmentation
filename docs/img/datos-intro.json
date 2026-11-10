@@ -1,0 +1,82 @@
+{
+  "kind": "reference_masks_not_predictions",
+  "iris_rgb": [
+    60,
+    220,
+    90
+  ],
+  "pupil_rgb": [
+    70,
+    120,
+    255
+  ],
+  "iris_alpha": 0.6,
+  "pupil_alpha": 1,
+  "records": [
+    {
+      "example": "frontal",
+      "image": "webcam_manual_mobius-format/Images/person01_1__f1_izq.png",
+      "mask": "webcam_manual_mobius-format/Masks/person01_1__f1_izq.png",
+      "crop_xywh": [
+        81,
+        79,
+        352,
+        352
+      ],
+      "image_sha256": "7da83069f2a0b0e39e57ff24d5a7e8ec1e1fe7b112b4e4621cc757d0528f828a",
+      "mask_sha256": "0531c759485e177d358665096a2f01ea0b7ca4807834966ad1341499deec59a8"
+    },
+    {
+      "example": "lateral",
+      "image": "webcam_manual_mobius-format/Images/person10_1__f1_izq.png",
+      "mask": "webcam_manual_mobius-format/Masks/person10_1__f1_izq.png",
+      "crop_xywh": [
+        80,
+        79,
+        352,
+        352
+      ],
+      "image_sha256": "2e2606ce8400c11b7f4e0d7b3f8ac1f02adf61ae6938121703d9e49061d350b8",
+      "mask_sha256": "e531f6edfddb84f7651e304ee342a525a00234f380102b32fb01f59c1a7f30bc"
+    },
+    {
+      "example": "anteojos",
+      "image": "webcam_manual_mobius-format/Images/person21_1__f1_izq.png",
+      "mask": "webcam_manual_mobius-format/Masks/person21_1__f1_izq.png",
+      "crop_xywh": [
+        81,
+        80,
+        354,
+        354
+      ],
+      "image_sha256": "54dae093efe28b470629ba0f5d001136f18f91ec2302a96f7e47ad27ee78c728",
+      "mask_sha256": "2a7ff5d17a0b890f78d736c9a91f990b8857feccf2da44be0592461d70ea732d"
+    },
+    {
+      "example": "poca-luz",
+      "image": "webcam_manual_mobius-format/Images/person27_1__f1_izq.png",
+      "mask": "webcam_manual_mobius-format/Masks/person27_1__f1_izq.png",
+      "crop_xywh": [
+        79,
+        80,
+        352,
+        352
+      ],
+      "image_sha256": "2feb6b55b0702bf1697a5694c27add4fe67f47abdee68c2d5085d5d1ec24f9c6",
+      "mask_sha256": "c5c15a8dffee7bacc76ed99fc8f5eaa687c0c911cc2800292298b16da701158d"
+    },
+    {
+      "example": "reflejo-moderado",
+      "image": "webcam_manual_mobius-format/Images/person30_1__f1_der.png",
+      "mask": "webcam_manual_mobius-format/Masks/person30_1__f1_der.png",
+      "crop_xywh": [
+        79,
+        82,
+        351,
+        351
+      ],
+      "image_sha256": "b9eb637649237da1c8e0e9b638992a781c7ff4bf7c8fbb102048f0771dac352d",
+      "mask_sha256": "9f6ad698505ca3da79d2e528d2ea2127818f3b2b1198f2d268ee1cf1a294f8fd"
+    }
+  ]
+}
