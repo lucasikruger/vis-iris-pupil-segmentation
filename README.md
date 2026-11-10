@@ -7,11 +7,9 @@ pupila en luz visible, con un formato común para entrenar y evaluar segmentador
 El repositorio reúne los preparadores, las particiones y una ResU-Net entrenada con
 esos datos, junto con una demo web para probarla en recortes oculares y cámaras web.
 
-![Recortes propios de webcam arriba y sus máscaras de referencia abajo: iris verde y pupila azul](docs/img/datos-intro.png)
+![Ojos en luz visible arriba y su segmentación de referencia abajo: iris verde y pupila azul](docs/img/intro.webp)
 
-Arriba, cinco ojos del conjunto propio de webcam. Abajo, los mismos recortes con
-sus **anotaciones de referencia**, iris en verde y pupila en azul. No son
-predicciones del modelo. [Script y procedencia de la figura](docs/img/README.md).
+Figura 1.1 de la tesis. Arriba, ojos en luz visible de distintas fuentes. Abajo, la segmentación de referencia, con iris en verde y pupila en azul. Los ojos provienen de MOBIUS, UBIRIS.v2, MICHE-I, PolyU, FEI, TEyeD y CASIA, y se muestran solo como ilustración: esas imágenes no se distribuyen con este repositorio ni con el dataset.
 
 ## Conjunto de datos
 

@@ -19,13 +19,4 @@ La licencia de estas figuras es la de los [datos propios](../../data/LICENSE).
 
 ## Apertura del README
 
-`datos-intro.png` conserva el diseño de dos filas de la figura 1.1, con cinco
-recortes propios de webcam. No reutiliza las imágenes de terceros de esa figura.
-La fila superior muestra los ojos; la inferior superpone las máscaras manuales
-de referencia (iris verde con alfa 0,6; pupila azul opaca), no predicciones.
-
-Se genera con `python scripts/tools/build_intro_figure.py --data-root dataset-package`.
-El script adapta el diseño de `intro_seg_fig.py` de las herramientas de la tesis.
-`datos-intro.json` registra los archivos de entrada, sus SHA-256 y las cajas al
-12 % tomadas de la configuración de ejemplos. Solo lee `Images/` y `Masks/` del
-conjunto propio de webcam. No lee capturas completas ni bases externas.
+`intro.webp` es la figura 1.1 de la tesis, sin cambios de contenido. Los ojos provienen de MOBIUS, UBIRIS.v2, MICHE-I, PolyU, FEI, TEyeD y CASIA y se incluyen solo como ilustración, con la atribución a cada base. Esas imágenes siguen bajo las licencias de sus bases y no forman parte del dataset ni de las licencias de este repositorio.
